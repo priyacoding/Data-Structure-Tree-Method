@@ -1,0 +1,47 @@
+# To Create and get output in the given format for 3 different employees from different firm using CLASS
+class TCS:
+    def __init__(self,ID,Company_Name,Salary,Location,Dob,CpyID):
+        self.id=ID
+        self.name=Company_Name
+        self.salary=float(Salary)
+        self.location=Location
+        self.dob=Dob
+        self.CpyID=self.name+ self.id
+        
+    def show(self):
+        print("hi my id is",self.id,"\nname is",self.name,"\nsalary is",self.salary,"\nlocation is",self.location,"\ndob is",self.dob,"\nCpyID is",self.CpyID)
+    
+class HCL(TCS):
+    def __init__(self,ID,FirstName,LastName,Salary,Gender,Bloodgroup,Doj,CpyID):
+        self.id=ID
+        self.firstname=FirstName
+        self.lastname=LastName
+        self.salary= 0.1*Salary
+        self.gender=Gender
+        self.bloodgroup=Bloodgroup
+        self.doj=Doj
+        self.CpyID=self.firstname+self.lastname+ self.id
+        
+    def show(self):
+        print("hi my id is",self.id,"\nfirstname is",self.firstname,"\nlastname is",self.lastname,"\nsalary is",self.salary,"\ngender is",self.gender,"\nbloodgroup is",self.bloodgroup,"\ndoj is",self.doj,"\nCpyID is",self.CpyID)
+class INFOCIS(HCL):
+    def __init__(self,ID,Name,Salary,Exp,Mobile,Address,Aadhar,CpyID):
+        self.id=ID
+        self.name=Name
+        self.salary=2.0*Salary
+        self.exp=Exp
+        self.mobile=Mobile
+        self.address=Address
+        self.aadhar=Aadhar
+        self.CpyID=self.name+ self.id
+    def show(self):
+        print("hi my id is",self.id,"\nname is",self.name,"\nsalary is",self.salary,"\nexp is",self.exp,"mobile no is",self.mobile,"\naddress is",self.address,"\naadhar no is",self.aadhar,"\nCpyID is",self.CpyID)        
+
+ # sample inputs       
+y1=TCS('23',"malic basha",30000,"chennai",6/13/2002,"None")
+y2=HCL('23',"malic","basha",30000,"male","-ve",13/1/2021,"None")
+y3=INFOCIS('23',"malic basha",30000,"five years",9677385616,"13/4south middle street,\nmannai,\nthiruvarur-district-614013.",324567891234,"None") 
+
+y1.show()
+y2.show()
+y3.show()
