@@ -1,0 +1,85 @@
+ASSECENDIND ORDER
+
+
+class tree:
+    def __init__(self,Data):
+        self.right=None
+        self.left=None
+        self.node=Data
+    def show(self):
+        if self.left:
+            self.left.show()
+        print(self.node)
+        if self.right:
+            self.right.show()
+    def insert(self,new_data):
+        if new_data<self.node:
+            if self.left is None:
+                self.left=tree(new_data)
+            else:
+                self.left.insert(new_data)
+        elif new_data>self.node:
+            if self.right is None:
+                self.right=tree(new_data)
+            else:
+                self.right.insert(new_data)
+                
+priya=tree(55)
+priya.insert(25)
+priya.insert(60)
+priya.insert(75)
+priya.insert(79)
+priya.insert(19)
+priya.insert(66)
+priya.insert(0)
+priya.insert(-20)
+priya.insert(-50)
+priya.insert(300)
+priya.insert(240)
+priya.insert(-3.767)   
+
+priya.show()
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DESCENDING ORDER 
+
+                  
+class tree:
+    def __init__(self,Data):
+        self.right=None
+        self.left=None
+        self.node=Data
+    def show(self):
+        if self.right:
+            self.right.show()
+        print(self.node)
+        if self.left:
+            self.left.show()
+    def insert(self,new_data):
+        if new_data<self.node:
+            if self.left is None:
+                self.left=tree(new_data)
+            else:
+                self.left.insert(new_data)
+        elif new_data>self.node:
+            if self.right is None:
+                self.right=tree(new_data)
+            else:
+                self.right.insert(new_data)
+                
+priya=tree(55)
+priya.insert(25)
+priya.insert(60)
+priya.insert(75)
+priya.insert(79)
+priya.insert(19)
+priya.insert(66)
+priya.insert(0)
+priya.insert(-20)
+priya.insert(-50)
+priya.insert(300)
+priya.insert(240)
+priya.insert(-3.767) 
+
+priya.show()                  
